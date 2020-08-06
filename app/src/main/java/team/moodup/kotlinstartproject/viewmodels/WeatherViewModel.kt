@@ -1,10 +1,10 @@
 package team.moodup.kotlinstartproject.viewmodels
 
 import androidx.lifecycle.MutableLiveData
-import team.moodup.kotlinstartproject.backend.ApiClientInterface
+import team.moodup.kotlinstartproject.backend.repository.WeatherRepository
 import team.moodup.weatherapp.model.WeatherResult
 
-class WeatherViewModel(api: ApiClientInterface) : BaseViewModel(api) {
+class WeatherViewModel(api: WeatherRepository) : BaseViewModel(api) {
 
     var weatherLiveData = MutableLiveData<WeatherResult>()
 

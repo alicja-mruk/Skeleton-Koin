@@ -1,7 +1,5 @@
-package team.moodup.kotlinstartproject.modules
+package team.moodup.kotlinstartproject.backend.di.modules
 
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
@@ -11,30 +9,14 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import team.moodup.kotlinstartproject.BuildConfig
-import team.moodup.kotlinstartproject.backend.ApiClient
-import team.moodup.kotlinstartproject.backend.ApiClientInterface
 import team.moodup.kotlinstartproject.backend.ApiService
-import team.moodup.kotlinstartproject.managers.DataManager
+import team.moodup.kotlinstartproject.backend.managers.DataManager
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 
-val okHttpClientModule = module {
-
+val apiServiceModule = module{
     single { createOkHttpClient(get()) }
-}
-
-val apiServiceModule = module {
-
-    single {
-        createWebService<ApiService>(get(), BuildConfig.BASE_URL) }
-}
-
-val apiClientModule = module {
-    single{
-        factory<ApiClientInterface>{
-            ApiClient(get(), get())
-        }
-    }
+    single{  createWebService<ApiService>(get(), BuildConfig.BASE_URL) }
 }
 
 fun createOkHttpClient(dataManager: DataManager): OkHttpClient {

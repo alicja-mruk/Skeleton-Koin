@@ -4,9 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.annotation.CallSuper
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
-import team.moodup.kotlinstartproject.backend.ApiClientInterface
+import team.moodup.kotlinstartproject.backend.repository.WeatherRepository
 
-abstract class BaseViewModel(val api: ApiClientInterface) : ViewModel() {
+abstract class BaseViewModel(val api: WeatherRepository) : ViewModel() {
 
     val disposables = CompositeDisposable()
 

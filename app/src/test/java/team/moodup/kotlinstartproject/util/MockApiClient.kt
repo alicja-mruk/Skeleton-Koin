@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import team.moodup.kotlinstartproject.backend.ApiService
-import team.moodup.kotlinstartproject.modules.apiClientModule
+import team.moodup.kotlinstartproject.backend.di.modules.apiClientModule
 import java.util.concurrent.Executor
 
 val okHttpClientModule = module {
