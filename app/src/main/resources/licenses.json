@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Fabric",
+    "description": "https://fabric.io/terms",
+    "url": "https://fabric.io/"
+  },
+  {
+    "name": "Koin",
+    "description": "Apache 2.0",
+    "url": "https://github.com/InsertKoinIO/koin"
+  },
+  {
+    "name": "Android Arch Runtime ",
+    "description": "Apache 2.0",
+    "url": "https://developer.android.com/topic/libraries/architecture/"
+  },
+  {
+    "name": "Retrofit",
+    "description": "Apache 2.0",
+    "url": "https://github.com/square/retrofit"
+  },
+  {
+    "name": "OkHttp",
+    "description": "Apache 2.0",
+    "url": "https://github.com/square/okhttp"
+  },
+  {
+    "name": "RxAndroid",
+    "description": "Apache 2.0",
+    "url": "https://github.com/ReactiveX/RxAndroid"
+  },
+  {
+    "name": "Mockito",
+    "description": "MIT License",
+    "url": "https://github.com/mockito/mockito"
+  },
+  {
+    "name": "Espresso",
+    "description": "Apache 2.0",
+    "url": "https://developer.android.com/testing"
+  },
+  {
+    "name": "Freepik",
+    "description": "Icons Design",
+    "url": "https://pl.freepik.com/"
+  }
+]

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">KotlinStartProject</string>
+
+
+    <string name="main_activity_text">Moodup.team</string>
+    <string name="main_activity_test_message">Test message</string>
+    <string name="main_activity_licenses">Licenses</string>
+
+    <string name="tab_bar_item_one">One</string>
+    <string name="tab_bar_item_two">Two</string>
+    <string name="tab_bar_item_three">Three</string>
+    <string name="tab_bar_item_four">Four</string>
+
+
+    <string name="settings_licenses_header">Licenses</string>
+    <string name="city_name">City name</string>
+    <string name="get_weather">Get weather!</string>
+    <string name="check_weather">Check weather</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Description</string>
+    <string name="temp">Temperature</string>
+    <string name="wind">Wind</string>
+    <string name="temp_max">"Max "</string>
+    <string name="temp_min">Min</string>
+    <string name="sun">Sun</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="empty_city">Empty city. Enter correct data</string>
+
+</resources>

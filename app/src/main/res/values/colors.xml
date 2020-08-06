@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="grey">#828e99</color>
+    <color name="dark">#516473</color>
+
+    <!--Tab bar-->
+    <color name="tab_bar_top_divider">#8E8E8E</color>
+    <color name="tab_bar_item">#8E8E8E</color>
+    <color name="tab_bar_selected_item">#256cad</color>
+    <color name="tab_bar_badge">#FF0000</color>
+</resources>
