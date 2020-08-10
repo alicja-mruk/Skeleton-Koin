@@ -10,7 +10,7 @@ import team.moodup.kotlinstartproject.viewmodels.BaseViewModel
 import team.moodup.kotlinstartproject.viewmodels.WeatherViewModel
 
 val viewModelModules = module {
-    viewModel<BaseViewModel> {
+    viewModel {
         WeatherViewModel(get())
     }
 }
@@ -19,3 +19,5 @@ val viewModelModules = module {
 val rxModule = module {
     single<SchedulerProvider> { ApplicationSchedulerProvider() }
 }
+
+val startProjectApp = listOf(viewModelModules, rxModule)

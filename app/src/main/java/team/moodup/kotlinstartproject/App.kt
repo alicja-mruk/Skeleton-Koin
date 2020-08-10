@@ -15,5 +15,5 @@ class App : Application() {
             modules(moduleList)
         }
     }
-    private val moduleList = listOf(dataModule, rxModule, okHttpClientModule, apiServiceModule, apiClientModule, viewModelModules)
+    private val moduleList = listOf(dataModule) + startProjectApi + startProjectApp
 }

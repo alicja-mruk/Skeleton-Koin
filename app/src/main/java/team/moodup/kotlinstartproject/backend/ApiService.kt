@@ -2,10 +2,10 @@ package team.moodup.kotlinstartproject.backend
 
 import io.reactivex.Single
 import retrofit2.http.GET
-import retrofit2.http.Path
-import team.moodup.weatherapp.model.WeatherResult
+import retrofit2.http.Query
+import team.moodup.kotlinstartproject.model.WeatherResult
 
 interface ApiService{
-    @GET("{q}")
-    fun getWeather(@Path("q") city : String) : Single<WeatherResult>
+    @GET("/")
+    fun getWeather(@Query("q") city : String) : Single<WeatherResult>
 }

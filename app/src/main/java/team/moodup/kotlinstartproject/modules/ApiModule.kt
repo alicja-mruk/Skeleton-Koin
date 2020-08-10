@@ -2,9 +2,7 @@ package team.moodup.kotlinstartproject.modules
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import okhttp3.Interceptor
-import okhttp3.OkHttpClient
-import okhttp3.Response
+import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -26,16 +24,15 @@ val okHttpClientModule = module {
 val apiServiceModule = module {
 
     single {
-        createWebService<ApiService>(get(), BuildConfig.BASE_URL) }
+        createWebService<ApiService>(get(), BuildConfig.BASE_URL)
+    }
 }
 
 val apiClientModule = module {
-    single{
-        factory<ApiClientInterface>{
-            ApiClient(get(), get())
-        }
-    }
+    single { ApiClient(get(), get()) as ApiClientInterface }
 }
+
+val startProjectApi = listOf(okHttpClientModule, apiServiceModule, apiClientModule)
 
 fun createOkHttpClient(dataManager: DataManager): OkHttpClient {
     val httpLoggingInterceptor = HttpLoggingInterceptor()
@@ -51,7 +48,19 @@ internal class AuthInterceptor(val dataManager: DataManager) : Interceptor {
 
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
-        val request = chain.request().newBuilder().addHeader("apiid", BuildConfig.API_KEY).build()
+        val original = chain.request()
+        val originalHttpUrl: HttpUrl = original.url
+
+        val url: HttpUrl = originalHttpUrl.newBuilder()
+            .addQueryParameter("appid", BuildConfig.API_KEY)
+            .build()
+
+        val requestBuilder : Request.Builder = original.newBuilder()
+            .url(url)
+        val request : Request = requestBuilder.build()
+
+
+//        addHeader("appid", BuildConfig.API_KEY).build()
 
         /*if (dataManager.isUserLoggedIn())
                    requestToProceed = request

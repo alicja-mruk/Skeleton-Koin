@@ -1,4 +1,6 @@
-package team.moodup.weatherapp.model
+package team.moodup.kotlinstartproject.model
+
+import team.moodup.weatherapp.model.*
 
 data class WeatherResult(
     val base: String,
