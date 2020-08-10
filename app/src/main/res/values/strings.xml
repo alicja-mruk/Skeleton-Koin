@@ -11,7 +11,7 @@
     <string name="tab_bar_item_three">Three</string>
     <string name="tab_bar_item_four">Four</string>
 
-
+    <string name="error">Error</string>
     <string name="settings_licenses_header">Licenses</string>
     <string name="city_name">City name</string>
     <string name="get_weather">Get weather!</string>

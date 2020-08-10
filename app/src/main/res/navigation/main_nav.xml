@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/weatherMainFragment"
-        android:name="team.moodup.kotlinstartproject.fragments.WeatherFragment"
+        android:name="team.moodup.kotlinstartproject.ui.fragments.WeatherFragment"
         android:label="WeatherMainFragment" >
         <action
             android:id="@+id/action_weatherMainFragment_to_resultFragment"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="team.moodup.kotlinstartproject.fragments.ResultFragment"
+        android:name="team.moodup.kotlinstartproject.ui.fragments.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" />
 </navigation>

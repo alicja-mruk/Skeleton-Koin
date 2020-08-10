@@ -1,5 +1,10 @@
 package team.moodup.kotlinstartproject.model
 
+import android.os.Parcelable
+import androidx.versionedparcelable.ParcelField
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class WeatherResult(
     val base: String,
     val clouds: Clouds,
@@ -14,4 +19,4 @@ data class WeatherResult(
     val visibility: Int,
     val weather: List<Weather>,
     val wind: Wind
-)
+): Parcelable

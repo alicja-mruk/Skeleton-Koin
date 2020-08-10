@@ -1,4 +1,4 @@
-package team.moodup.kotlinstartproject.fragments
+package team.moodup.kotlinstartproject.ui.fragments
 
 import androidx.fragment.app.Fragment
 import android.widget.Toast

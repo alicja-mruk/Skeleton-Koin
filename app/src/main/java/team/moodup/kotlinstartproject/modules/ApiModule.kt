@@ -29,7 +29,7 @@ val apiServiceModule = module {
 }
 
 val apiClientModule = module {
-    single { ApiClient(get(), get()) as ApiClientInterface }
+    single { ApiClient(get()) as ApiClientInterface }
 }
 
 val startProjectApi = listOf(okHttpClientModule, apiServiceModule, apiClientModule)
@@ -79,7 +79,7 @@ inline fun <reified T> createWebService(okHttpClient: OkHttpClient, url: String)
         .baseUrl(url)
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create(gson))
-        .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build()
+        .build()
     return retrofit.create(T::class.java)
 }
 

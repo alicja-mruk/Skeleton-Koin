@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="team.moodup.weatherapp.fragments.ResultFragment">
+    tools:context=".ui.fragments.ResultFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,13 +34,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/temp_field" />
+            app:layout_constraintTop_toBottomOf="@+id/temp_field_min" />
 
         <ImageView
             android:id="@+id/weather_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/description_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,6 +61,7 @@
             tools:text="@string/description" />
 
         <TextView
+            android:textAlignment="center"
             android:id="@+id/description_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,7 +85,8 @@
             app:layout_constraintTop_toBottomOf="@+id/description_field" />
 
         <TextView
-            android:id="@+id/temp_field"
+            android:textAlignment="center"
+            android:id="@+id/temp_field_min"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -95,6 +99,7 @@
             tools:text="@string/temp_min" />
 
         <TextView
+            android:textAlignment="center"
             android:id="@+id/wind_speed_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -107,7 +112,8 @@
             tools:text="@string/wind" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:textAlignment="center"
+            android:id="@+id/temp_field_max"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -120,25 +126,27 @@
             tools:text="@string/temp_max" />
 
         <TextView
+            android:textAlignment="center"
             android:id="@+id/textView8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:padding="10dp"
             android:text="@string/temp_max"
-            app:layout_constraintEnd_toStartOf="@+id/textView7"
+            app:layout_constraintEnd_toStartOf="@+id/temp_field_max"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/temp_field"
+            app:layout_constraintStart_toEndOf="@+id/temp_field_min"
             app:layout_constraintTop_toBottomOf="@+id/temp_title" />
 
         <TextView
+            android:textAlignment="center"
             android:id="@+id/textView9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:padding="10dp"
             android:text="@string/temp_min"
-            app:layout_constraintEnd_toStartOf="@+id/temp_field"
+            app:layout_constraintEnd_toStartOf="@+id/temp_field_min"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
@@ -169,6 +177,7 @@
             app:layout_constraintTop_toBottomOf="@+id/sun_title" />
 
         <TextView
+            android:textAlignment="center"
             android:id="@+id/sunset_field"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -193,6 +202,7 @@
             tools:text="@string/sunrise" />
 
         <TextView
+            android:textAlignment="center"
             android:id="@+id/textView14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
