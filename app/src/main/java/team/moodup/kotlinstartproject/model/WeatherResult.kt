@@ -1,7 +1,5 @@
 package team.moodup.kotlinstartproject.model
 
-import team.moodup.weatherapp.model.*
-
 data class WeatherResult(
     val base: String,
     val clouds: Clouds,
@@ -12,6 +10,7 @@ data class WeatherResult(
     val main: Main,
     val name: String,
     val sys: Sys,
+    val timezone: Int,
     val visibility: Int,
     val weather: List<Weather>,
     val wind: Wind

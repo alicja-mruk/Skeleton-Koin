@@ -73,10 +73,12 @@ internal class AuthInterceptor(val dataManager: DataManager) : Interceptor {
 }
 
 inline fun <reified T> createWebService(okHttpClient: OkHttpClient, url: String): T {
+    val gson =  GsonBuilder().setLenient().create()
+
     val retrofit = Retrofit.Builder()
         .baseUrl(url)
         .client(okHttpClient)
-        .addConverterFactory(GsonConverterFactory.create())
+        .addConverterFactory(GsonConverterFactory.create(gson))
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build()
     return retrofit.create(T::class.java)
 }

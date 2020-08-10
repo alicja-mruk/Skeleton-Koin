@@ -1,6 +1,7 @@
 package team.moodup.kotlinstartproject.backend
 
 import io.reactivex.Single
+import okhttp3.ResponseBody
 import org.koin.sampleapp.util.rx.SchedulerProvider
 import team.moodup.kotlinstartproject.model.WeatherResult
 
